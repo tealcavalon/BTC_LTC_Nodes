@@ -73,6 +73,9 @@ rm -rf /etc/nginx/sites-available/default
 cd /etc/nginx/sites-available
 wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/default
 exit
+echo "YOU NEED TO MANUALLY EDIT /etc/nginx/sites-available/default and add your FQDN"
+echo "Press return to continue!"
+read dummy_variable
 sudo service php5-fpm reload
 sudo service nginx reload
 
@@ -97,9 +100,9 @@ wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config.p
 echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/ltc_status/php/config.php and add info from ~/.litecoin/litecoin.conf"
 echo "Press return to continue!"
 read dummy_variable
-
+exit
 #Let's make sure Nginx can access the files we have created
 cd /usr/share/nginx
-chown nginx:www-data /usr/share/nginx/html -R
+sudo chown www-data:www-data /usr/share/nginx/html -R
 
 #NEXT ON THE LINE IS THE VNSTAT :-D
