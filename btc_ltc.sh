@@ -65,8 +65,20 @@ exit
 
 #Install nginx and php
 sudo apt-get install nginx
-sudo apt-get install php5 php5-fpm php5-curl php5-cgi php5-gd php-pear php5-mcrypt php5-sqlite php5-tidy php5-xmlrpc php5-xsl
+sudo apt-get install php5 php-apc php5-fpm php5-curl php5-cgi php5-gd php-pear php5-mcrypt php5-sqlite php5-tidy php5-xmlrpc php5-xsl
 sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default-backup
 sudo su
+echo "cgi.fix_pathinfo=0" >> /etc/php5/fpm/php.ini
+rm -rf /etc/nginx/sites-available/default
+cd /etc/nginx/sites-available
+wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/default
+chown nginx:www-data /etc/nginx/sites-available/default
+exit
+sudo service php5-fpm reload
+sudo service nginx reload
+
+#Install craigwatson - bitcoind-status
+sudo su
 cd /usr/share/nginx/html
-wget 
+git clone https://github.com/craigwatson/bitcoind-status.git
+mv bitcoind-status btc_status
