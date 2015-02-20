@@ -85,7 +85,8 @@ cd /usr/share/nginx/html
 git clone https://github.com/craigwatson/bitcoind-status.git
 mv bitcoind-status btc_status
 cd /usr/share/nginx/html/btc_status/php/
-wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config.php
+wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config_btc.php
+mv config_btc.php config.php
 echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/btc_status/php/config.php and add info from ~/.bitcoin/bitcoin.conf"
 echo "Press return to continue!"
 read dummy_variable
@@ -96,7 +97,8 @@ cd /usr/share/nginx/html
 git clone https://github.com/craigwatson/bitcoind-status.git
 mv bitcoind-status ltc_status
 cd /usr/share/nginx/html/ltc_status/php
-wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config.php
+wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config_ltc.php
+mv config_ltc.php config.php
 echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/ltc_status/php/config.php and add info from ~/.litecoin/litecoin.conf"
 echo "Press return to continue!"
 read dummy_variable
