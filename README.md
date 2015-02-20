@@ -9,6 +9,8 @@ What to expect?
 - Vnstat
 - bitcoind-status from craigwatson @ github
 
+If you use the btc_ltc.sh don't forget to: chmod +x btc_ltc.sh
+
 If you have any questions or remarks feel free to speak up.
 
 Tealc
