@@ -67,3 +67,6 @@ exit
 sudo apt-get install nginx
 sudo apt-get install php5 php5-fpm php5-curl php5-cgi php5-gd php-pear php5-mcrypt php5-sqlite php5-tidy php5-xmlrpc php5-xsl
 sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default-backup
+sudo su
+cd /usr/share/nginx/html
+wget 
