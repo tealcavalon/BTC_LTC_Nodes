@@ -72,7 +72,6 @@ echo "cgi.fix_pathinfo=0" >> /etc/php5/fpm/php.ini
 rm -rf /etc/nginx/sites-available/default
 cd /etc/nginx/sites-available
 wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/default
-chown nginx:www-data /etc/nginx/sites-available/default
 exit
 sudo service php5-fpm reload
 sudo service nginx reload
@@ -82,3 +81,23 @@ sudo su
 cd /usr/share/nginx/html
 git clone https://github.com/craigwatson/bitcoind-status.git
 mv bitcoind-status btc_status
+cd /usr/share/nginx/html/btc_status/php/
+wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config.php
+echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/btc_status/php/config.php and add info from ~/.bitcoin/bitcoin.conf"
+echo "Press return to continue!"
+read dummy_variable
+
+#Install craigwatson - litecoin-status
+sudo su
+cd /usr/share/nginx/html
+git clone https://github.com/craigwatson/bitcoind-status.git
+mv bitcoind-status ltc_status
+cd /usr/share/nginx/html/ltc_status/php
+wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config.php
+echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/ltc_status/php/config.php and add info from ~/.litecoin/litecoin.conf"
+echo "Press return to continue!"
+read dummy_variable
+
+#Let's make sure Nginx can access the files we have created
+cd /usr/share/nginx
+chown nginx:www-data /usr/share/nginx/html -R
