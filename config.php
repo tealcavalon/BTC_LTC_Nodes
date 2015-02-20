@@ -2,8 +2,8 @@
 
 $config = array(
   'debug'                   => FALSE,
-  'rpc_user'                => 'rpcuser',
-  'rpc_pass'                => 'rpcpass',
+  'rpc_user'                => 'vi ~/.bitcoin/bitcoin.conf fill info here',
+  'rpc_pass'                => 'vi ~/.bitcoin/bitcoin.conf fill info here',
   'rpc_host'                => 'localhost',
   'rpc_port'                => '8332',
   'rpc_ssl'                 => FALSE,
@@ -18,10 +18,10 @@ $config = array(
   'use_bitcoind_ip'         => FALSE,
   'intro_text'              => 'not_set',
   'display_peer_info'       => FALSE,
-  'display_free_disk_space' => FALSE,
-  'display_ip_location'     => FALSE,
+  'display_free_disk_space' => TRUE,
+  'display_ip_location'     => TRUE,
   'display_testnet'         => TRUE,
-  'display_version'         => FALSE,
+  'display_version'         => TRUE,
   'use_cache'               => TRUE
 );
 
