@@ -11,7 +11,7 @@ What to expect?
 
 Where does it came from? Copyright?
 - GNU GENERAL PUBLIC LICENSE v3.0 (so just use and abuse :-D )
-- Bitcoind-status: All Rights Reserved to https://github.com/craigwatson
+- PHP Bitcoind-status: All Rights Reserved to https://github.com/craigwatson
 - Took same stuff from https://github.com/spesmilo/electrum-server/blob/master/HOWTO.md and https://github.com/pooler/electrum-ltc-server/blob/master/HOWTO.md
 
 NOTE:
