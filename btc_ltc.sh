@@ -101,3 +101,5 @@ read dummy_variable
 #Let's make sure Nginx can access the files we have created
 cd /usr/share/nginx
 chown nginx:www-data /usr/share/nginx/html -R
+
+#NEXT ON THE LINE IS THE VNSTAT :-D
