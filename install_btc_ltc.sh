@@ -110,4 +110,4 @@ exit
 cd /usr/share/nginx
 sudo chown www-data:www-data /usr/share/nginx/html -R
 
-#NEXT ON THE LINE IS THE VNSTAT :-D
+#NEXT ON THE LINE IS THE VNSTAT & FIREWALL RULES :-D
