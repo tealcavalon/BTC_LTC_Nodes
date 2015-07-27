@@ -100,8 +100,9 @@ cd /usr/share/nginx/html/ltc_status/php
 wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config_ltc.php
 mv config_ltc.php config.php
 cd /usr/share/nginx/html/ltc_status/html
-rm -rf template.html
-wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/template.html
+##This two lines doesn't work anymore due to changes in the PHP main files
+##rm -rf template.html
+##wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/template.html
 echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/ltc_status/php/config.php and add info from ~/.litecoin/litecoin.conf"
 echo "Press return to continue!"
 read dummy_variable
