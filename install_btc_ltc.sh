@@ -11,7 +11,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 echo "########### We're going to install everything that we need to get things right the first time"
-sudo apt-get install build-essential python-software-properties git make g++ python-leveldb libboost-all-dev libssl-dev libdb++-dev pkg-config libminiupnpc-dev -y
+sudo apt-get install automake libtool autoconf build-essential python-software-properties git make g++ python-leveldb libboost-all-dev libssl-dev libdb++-dev pkg-config libminiupnpc-dev -y
 cd ~
 sudo adduser bitcoin --disabled-password
 sudo adduser litecoin --disabled-password
@@ -42,13 +42,15 @@ exit
 sudo su - litecoin
 mkdir ~/bin ~/src
 echo "PATH="$HOME/bin:$PATH"" >> .bashrc
-cd ~/src && git clone https://github.com/litecoin-project/litecoin.git
-cd litecoin/src
-make -f makefile.unix
-strip litecoind
-cp -a ~/src/litecoin/src/litecoind ~/bin/litecoind
+cd ~/src && git clone https://github.com/litecoin-project/litecoin.git -b master-0.10
+cd litecoin
+./autogen.sh
+./configure --disable-wallet --without-miniupnpc
+make
+strip src/litecoind src/litecoin-cli src/litecoin-tx
+cp -a src/litecoind src/litecoin-cli src/litecoin-tx ~/bin
 mkdir ~/.litecoin
-config=".litecoin/litecoin.conf"
+config="/home/litecoin/.litecoin/litecoin.conf"
 touch $config
 echo "server=1" > $config
 echo "daemon=1" >> $config
