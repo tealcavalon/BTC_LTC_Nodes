@@ -22,13 +22,11 @@ mkdir ~/bin ~/src
 echo "PATH="$HOME/bin:$PATH"" >> .bashrc
 cd ~/src && wget https://bitcoin.org/bin/bitcoin-core-0.11.0/bitcoin-0.11.0-linux64.tar.gz
 tar xfz bitcoin-0.11.0-linux64.tar.gz
-cd bitcoin-0.11.0
-./configure --disable-wallet --without-miniupnpc
-make
-strip src/bitcoind src/bitcoin-cli src/bitcoin-tx
-cp -a src/bitcoind src/bitcoin-cli src/bitcoin-tx ~/bin
+cd bitcoin-0.11.0/bin
+cp -a bitcoin-cli bitcoind bitcoin-qt bitcoin-tx ~/bin
+cd ~/bin
 mkdir ~/.bitcoin
-config=".bitcoin/bitcoin.conf"
+config="/home/bitcoin/.bitcoin/bitcoin.conf"
 touch $config
 echo "server=1" > $config
 echo "daemon=1" >> $config
