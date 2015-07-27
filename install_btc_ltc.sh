@@ -87,7 +87,7 @@ mv bitcoind-status btc_status
 cd /usr/share/nginx/html/btc_status/php/
 wget https://raw.githubusercontent.com/tealcavalon/BTC_LTC_Nodes/master/config_btc.php
 mv config_btc.php config.php
-echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/btc_status/php/config.php and add info from ~/.bitcoin/bitcoin.conf"
+echo "YOU NEED TO MANUALLY EDIT /usr/share/nginx/html/btc_status/php/config.php and add info from /home/bitcoin/.bitcoin/bitcoin.conf"
 echo "Press return to continue!"
 read dummy_variable
 
