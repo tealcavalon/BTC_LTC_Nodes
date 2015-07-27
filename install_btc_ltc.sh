@@ -20,9 +20,9 @@ sudo adduser litecoin --disabled-password
 sudo su - bitcoin
 mkdir ~/bin ~/src
 echo "PATH="$HOME/bin:$PATH"" >> .bashrc
-cd ~/src && wget https://bitcoin.org/bin/0.11.0/bitcoin-0.11.0.tar.gz
-tar xfz bitcoin-0.11.0.tar.gz
-cd bitcoin-0.11.0
+cd ~/src && wget https://bitcoin.org/bin/bitcoin-core-0.11.0/bitcoin-0.11.0-linux64.tar.gz
+tar xfz bitcoin-0.11.0-linux64.tar.gz
+cd bitcoin-0.11.0-linux64
 ./configure --disable-wallet --without-miniupnpc
 make
 strip src/bitcoind src/bitcoin-cli src/bitcoin-tx
