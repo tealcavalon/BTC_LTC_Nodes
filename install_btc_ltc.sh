@@ -11,7 +11,7 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get dist-upgrade -y
 echo "########### We're going to install everything that we need to get things right the first time"
-sudo apt-get install automake libtool autoconf build-essential python-software-properties git make g++ python-leveldb libboost-all-dev libssl-dev libdb++-dev pkg-config libminiupnpc-dev -y
+sudo apt-get install curl automake libtool autoconf build-essential python-software-properties git make g++ python-leveldb libboost-all-dev libssl-dev libdb++-dev pkg-config libminiupnpc-dev -y
 cd ~
 sudo adduser bitcoin --disabled-password
 sudo adduser litecoin --disabled-password
