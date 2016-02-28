@@ -20,7 +20,7 @@ sudo adduser litecoin --disabled-password
 sudo su - bitcoin
 mkdir ~/bin ~/src
 echo "PATH="$HOME/bin:$PATH"" >> .bashrc
-cd ~/src && wget https://bitcoin.org/bin/bitcoin-core-0.11.0/bitcoin-0.11.0-linux64.tar.gz
+cd ~/src && wget https://bitcoin.org/bin/bitcoin-core-0.12.0/bitcoin-0.12.0-linux64.tar.gz
 tar xfz bitcoin-0.11.0-linux64.tar.gz
 cd bitcoin-0.11.0/bin
 cp -a bitcoin-cli bitcoind bitcoin-qt bitcoin-tx ~/bin
