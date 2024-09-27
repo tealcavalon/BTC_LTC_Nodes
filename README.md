@@ -1,4 +1,4 @@
-Create a Bitecoin and Litecoin Node for Ubuntu with PHP Status and VNStat
+Create a Bitcoin and Litecoin Node for Ubuntu with PHP Status and VNStat
 ********
 
 After deploying several Bitcoin's and Litecoin's node I've found that it would be much easier just to make a script to be deployed on a brand new Ubuntu server and just making it the more easily to do.
